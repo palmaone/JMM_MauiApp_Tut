@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using JMM_MauiApp_Tut.Services;
+using JMM_MauiApp_Tut.ViewModel;
+using Microsoft.Extensions.Logging;
 
 namespace JMM_MauiApp_Tut;
 
@@ -13,6 +15,10 @@ public static class MauiProgramExtensions
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
+
+		builder.Services.AddSingleton<MonkeysViewModel>();
+		builder.Services.AddSingleton<MonkeyService>();
+		builder.Services.AddSingleton<MainPage>();
 
 #if DEBUG
 		builder.Logging.AddDebug();

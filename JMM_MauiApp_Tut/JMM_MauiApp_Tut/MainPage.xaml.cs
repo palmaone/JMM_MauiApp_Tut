@@ -1,11 +1,14 @@
-﻿namespace JMM_MauiApp_Tut;
+﻿using JMM_MauiApp_Tut.ViewModel;
+
+namespace JMM_MauiApp_Tut;
 
 public partial class MainPage : ContentPage
 {
 
-	public MainPage()
+	public MainPage(MonkeysViewModel vm)
 	{
 		InitializeComponent();
+		BindingContext = vm;
 	}
 
 	
