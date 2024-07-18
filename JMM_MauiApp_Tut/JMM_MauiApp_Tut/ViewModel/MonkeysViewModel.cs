@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using JMM_MauiApp_Tut.Services;
 using System.Diagnostics;
 using CommunityToolkit.Mvvm.Input;
+using JMM_MauiApp_Tut.View;
 
 namespace JMM_MauiApp_Tut.ViewModel
 {
@@ -19,6 +20,18 @@ namespace JMM_MauiApp_Tut.ViewModel
             this.monkeyService = monkeyService;
             //GetMonkeysCommand = new Command(async () => await GetMonkeysAsync();
 
+        }
+
+        [RelayCommand]
+        async Task GoToDetailsAsync(Monkey monkey) 
+        {
+            if (monkey == null) return;
+
+            await Shell.Current.GoToAsync($"{nameof(DetailsPage)}?id{monkey.Name}", true, 
+                    new Dictionary<string, object>
+                    {
+                        {"Monkey", monkey}
+                    });
         }
 
         [RelayCommand]

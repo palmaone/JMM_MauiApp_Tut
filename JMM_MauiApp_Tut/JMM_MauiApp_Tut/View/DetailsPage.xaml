@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JMM_MauiApp_Tut.View.DetailsPage"
+             xmlns:vm="clr-namespace:JMM_MauiApp_Tut.ViewModel"
+             x:DataType="vm:MonkeyDetailsViewModel"
+             Title="{Binding Monkey.Name}">
+    <ScrollView>
+      <Label Text="{Binding Monkey.Details}"
+           FontSize="25" />
+  </ScrollView>
+</ContentPage>

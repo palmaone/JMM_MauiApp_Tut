@@ -1,4 +1,5 @@
 ﻿using JMM_MauiApp_Tut.Services;
+using JMM_MauiApp_Tut.View;
 using JMM_MauiApp_Tut.ViewModel;
 using Microsoft.Extensions.Logging;
 
@@ -17,8 +18,10 @@ public static class MauiProgramExtensions
 			});
 
 		builder.Services.AddSingleton<MonkeysViewModel>();
+		builder.Services.AddTransient<MonkeyDetailsViewModel>();
 		builder.Services.AddSingleton<MonkeyService>();
 		builder.Services.AddSingleton<MainPage>();
+		builder.Services.AddTransient<DetailsPage>();
 
 #if DEBUG
 		builder.Logging.AddDebug();
