@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using JMM_MauiApp_Tut.Model;
 
 namespace JMM_MauiApp_Tut.ViewModel;
@@ -12,5 +13,11 @@ public partial class MonkeyDetailsViewModel : BaseViewModel
 
     [ObservableProperty]
     Monkey? monkey;
+
+    [RelayCommand]
+    async Task GoBackAsync()
+    {
+        await Shell.Current.GoToAsync("..");
+    }
 }
 
