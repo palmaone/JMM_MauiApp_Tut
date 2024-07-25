@@ -14,4 +14,4 @@ public partial class DetailsPage : ContentPage
     {
         base.OnNavigatedTo(args);
     }
-}
+}   
