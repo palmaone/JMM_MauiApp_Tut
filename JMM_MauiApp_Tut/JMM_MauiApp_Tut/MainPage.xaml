@@ -47,6 +47,7 @@
         </DataTemplate>
       </CollectionView.ItemTemplate>
     </CollectionView>
+    
     <Button Text="Get Monkeys" 
             Command="{Binding GetMonkeysCommand}"
             IsEnabled="{Binding IsNotBusy}"
@@ -54,6 +55,15 @@
             Margin="8"
             CornerRadius="4"
             Style="{StaticResource ButtonOutline}"/>
+
+    <Button Text="Find Closest"
+            Style="{StaticResource ButtonOutline}"
+            Command="{Binding GetClosestMonkeyCommand}"
+            IsEnabled="{Binding IsNotBusy}"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="8"/>
+    
     <ActivityIndicator IsVisible="{Binding IsBusy}"
                        IsRunning="{Binding IsBusy}"
                        HorizontalOptions="FillAndExpand"

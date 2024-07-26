@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JMM_MauiApp_Tut.WinUI", "JMM_MauiApp_Tut\JMM_MauiApp_Tut.WinUI\JMM_MauiApp_Tut.WinUI.csproj", "{1AA5F22B-62F8-414F-AE50-635E99EB3F76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JMM-MauiApp-Tut.WinUI", "JMM_MauiApp_Tut\JMM_MauiApp_Tut.WinUI\JMM-MauiApp-Tut.WinUI.csproj", "{1AA5F22B-62F8-414F-AE50-635E99EB3F76}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JMM_MauiApp_Tut.Droid", "JMM_MauiApp_Tut\JMM_MauiApp_Tut.Droid\JMM_MauiApp_Tut.Droid.csproj", "{9E30318E-74DD-491B-9BAF-814DC9E892B8}"
 EndProject
