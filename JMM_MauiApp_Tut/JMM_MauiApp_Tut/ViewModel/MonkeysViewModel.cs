@@ -4,6 +4,7 @@ using JMM_MauiApp_Tut.Services;
 using System.Diagnostics;
 using CommunityToolkit.Mvvm.Input;
 using JMM_MauiApp_Tut.View;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace JMM_MauiApp_Tut.ViewModel
 {
@@ -28,6 +29,9 @@ namespace JMM_MauiApp_Tut.ViewModel
             //GetMonkeysCommand = new Command(async () => await GetMonkeysAsync();
 
         }
+
+        [ObservableProperty]
+        bool isRefreshing;
 
         [RelayCommand]
         async Task GetClosestMonkeyAsync()
@@ -120,6 +124,7 @@ namespace JMM_MauiApp_Tut.ViewModel
             finally
             {
                 IsBusy = false;
+                IsRefreshing = false;
             }
         }
     }
